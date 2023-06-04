@@ -1,3 +1,6 @@
 .content-bottom-align{
-  margin-bottom: 40px;
+  margin-bottom: 80px;
+  @media (max-width: 767px) {
+    padding-bottom: 50px;
+  }
 }

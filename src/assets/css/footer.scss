@@ -6,6 +6,9 @@
     bottom: 0;
     width: 100%;
     margin-top: 10px;
+    @media (max-width: 767px) {
+      padding: 18px 0;
+    }
     .copyright-text p {
         margin: 0;
         font-size: 14px;
@@ -13,6 +16,7 @@
       }
       .footer-menu ul{
         margin-bottom: 0;
+        padding-left: 0;
       }
       .footer-menu li {
         display: inline-block;

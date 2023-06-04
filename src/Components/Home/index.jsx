@@ -39,13 +39,14 @@ console.log("sortConfig", sortConfig);
     return (
         <div className='contact-list'>
             <div className='row heading-section'>
-                <div className='col-md-6 col-xs-12 col-sm-12'>
+                <div className='col-6'>
                     <h2>Contact List</h2>
                 </div>
-                <div className='col-md-6 col-xs-12 col-sm-12 add-contact-btn'>
-                    <Link to="/add" className="btn btn-success">Add Contact</Link>
+                <div className='col-6 back-btn'>
+                <Link to="/add" className="btn btn-primary">Add Contact</Link>
                 </div>
             </div>
+            <div class="table-responsive"> 
             <table className="contact-table table table-bordered table-striped">
                 <thead>
                     <tr>
@@ -75,13 +76,14 @@ console.log("sortConfig", sortConfig);
                             <td>{contact.postalCode}</td>
                             <td>
                                 <Link to={`/edit/${contact.id}`} className="btn btn-primary mr-2">Edit</Link>
-                                <Link to={`/map`} state={contact} className="btn btn-primary ms-2">Map</Link>
+                                <Link to={`/map`} state={contact} className="btn btn-primary list-view-map-btn">Map</Link>
                             </td>
                         </tr>
                     ))}
                    
                 </tbody>
             </table>
+            </div>
             {sortedContacts.length >=1 ? ""
              :
              <div className='row'>

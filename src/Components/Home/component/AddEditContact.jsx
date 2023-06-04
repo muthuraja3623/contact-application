@@ -127,19 +127,7 @@ const AddEditContact = ({ contacts, addContact, updateContact }) => {
                             />
                         </div>
                     </div>
-                    <div className='col-md-6 col-xs-12 col-sm-12'>
-                        <div className="form-group mb-3">
-                            <label>Address</label>
-                            <input
-                                type="text"
-                                className="form-control"
-                                value={contactValue.address}
-                                name='address'
-                                onChange={handleOnchange}
-                                required
-                            />
-                        </div>
-                    </div>
+                   
                     <div className='col-md-6 col-xs-12 col-sm-12'>
                         <div className="form-group mb-3">
                             <label>City</label>
@@ -181,7 +169,7 @@ const AddEditContact = ({ contacts, addContact, updateContact }) => {
                         <div className="form-group mb-3">
                             <label>Postal code</label>
                             <input
-                                type="number"
+                                type="text"
                                 className="form-control"
                                 value={contactValue.postalCode}
                                 name='postalCode'
@@ -190,8 +178,20 @@ const AddEditContact = ({ contacts, addContact, updateContact }) => {
                             />
                         </div>
                     </div>
+                    <div className='col-md-6 col-xs-12 col-sm-12'>
+                        <div className="form-group mb-3">
+                            <label>Address</label>
+                            <textarea 
+                                className="form-control"
+                                value={contactValue.address}
+                                name='address'
+                                onChange={handleOnchange}
+                                rows="3"
+                            />
+                        </div>
+                    </div>
                 </div>
-                <div className='submit-btn pb-5'>
+                <div className='submit-btn'>
                     <button type="submit" className="btn btn-primary">Save</button>
                 </div>
             </form >
